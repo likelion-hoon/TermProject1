@@ -1,6 +1,5 @@
 package com.example.ljh.termproject1;
 
-
 /**
  * 액션 바를 가지고 있으며 월별,주별,일별 보기, 일정 추가 메뉴를 가지고 있다.
  * 월별, 주별, 일별 보기 메뉴에 따라 각각 월별,주별,일별 일정을 보여주는 프래그먼트를 보여준다.
@@ -16,7 +15,7 @@ package com.example.ljh.termproject1;
  * 알림 기능을 추가 구현하면 +10점을 추가 부여한다.
  * 1인팀으로 할 경우 +20점을 추가 부여한다.
  */
-
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,15 +46,20 @@ public class MainActivity extends AppCompatActivity {
     // 액션바 선택했을 때
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+
         switch (item.getItemId()) {
             case R.id.look_month: // 월별 보기 프래그먼트를 보여준다.
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new MonthFragment()).addToBackStack(null).commit();
+                ab.setTitle("Month Calendar");
                 return true;
             case R.id.look_week: // 주별 보기 프래그먼트를 보여준다.
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new WeekFragment()).addToBackStack(null).commit();
+                ab.setTitle("Week Calendar");
                 return true;
             case R.id.look_day: // 일별 보기 프래그먼트를 보여준다.
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new DayFragment()).addToBackStack(null).commit();
+                ab.setTitle("Date Calendar");
                 return true;
             case R.id.insert_sche:
                 startActivity(new Intent(this, ScheDetailsActivity.class));

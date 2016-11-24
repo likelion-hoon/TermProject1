@@ -11,10 +11,15 @@ package com.example.ljh.termproject1;
  */
 
 import android.app.Activity;
+import android.os.Bundle;
 
 /**
  * Created by B10601 on 2016-11-24.
  */
 
 public class ScheDetailsActivity extends Activity {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
 }
