@@ -4,18 +4,18 @@
     <item
         android:id="@+id/look_month"
         android:title="월별 보기"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/look_week"
         android:title="주별 보기"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/look_day"
         android:title="일별 보기"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/insert_sche"
         android:title="일정추가 메뉴"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 
 </menu>

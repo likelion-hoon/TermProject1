@@ -23,8 +23,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,4 +66,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-}
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+} // 메인액티비티 끝
