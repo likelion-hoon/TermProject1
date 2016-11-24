@@ -2,14 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.ljh.termproject1.WeekFragment"
    >
 
-    <FrameLayout
-        android:id="@+id/fragment"
+
+    <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00ff00">
-    </FrameLayout>
+         />
 
 </LinearLayout>
