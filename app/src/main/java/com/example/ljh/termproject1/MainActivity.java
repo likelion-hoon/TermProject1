@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.look_month: // 월별 보기 프래그먼트를 보여준다.
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new MonthFragment()).addToBackStack(null).commit();
                 return true;
             case R.id.look_week: // 주별 보기 프래그먼트를 보여준다.
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new WeekFragment()).addToBackStack(null).commit();
                 return true;
             case R.id.look_day: // 일별 보기 프래그먼트를 보여준다.
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new DayFragment()).addToBackStack(null).commit();
                 return true;
             case R.id.insert_sche:
                 startActivity(new Intent(this, ScheDetailsActivity.class));
@@ -61,4 +61,5 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }
