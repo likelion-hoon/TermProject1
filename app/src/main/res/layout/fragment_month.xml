@@ -6,12 +6,12 @@
     tools:context="com.example.ljh.termproject1.MonthFragment"
     >
 
-    <FrameLayout
-        android:id="@+id/fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ff0000">
-    </FrameLayout>
+    <listView
+        android:id="@+id/listView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
 
 </LinearLayout>
 

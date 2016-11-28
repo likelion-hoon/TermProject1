@@ -7,6 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.CalendarView;
+import android.widget.GridView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class DayFragment extends Fragment {
@@ -18,8 +25,17 @@ public class DayFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_day, container, false);
+        CalendarView calendar = (CalendarView) view.findViewById(R.id.calendar);
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            public void onSelectedDayChange(CalendarView view, int year,
+                                             int month, int dayOfMonth) {
+
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_day, container, false);
+        return view;
     }
 
 }
