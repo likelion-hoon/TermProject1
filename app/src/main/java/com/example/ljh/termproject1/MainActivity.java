@@ -16,6 +16,7 @@ package com.example.ljh.termproject1;
  * 1인팀으로 할 경우 +20점을 추가 부여한다.
  */
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
