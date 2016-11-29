@@ -36,7 +36,7 @@ public class WeekFragment extends Fragment {
 
 
         gv.setAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(),
-                android.R.layout.simple_list_item_1, WEEKS));
+                R.layout.listview_edit, WEEKS));
 
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

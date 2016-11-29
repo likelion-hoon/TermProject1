@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class MonthFragment extends Fragment {
 
     int mCurCheckPosition = -1;
-    public static final String[] MONTHS = {"1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"};
+
 
     public MonthFragment() {
         // Required empty public constructor
@@ -47,7 +47,7 @@ public class MonthFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_month, container, false);
 
         ListView lv = (ListView) view.findViewById(R.id.listview1);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, MONTHS);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.listview_edit, Month.MONTHS);
         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -58,6 +58,7 @@ public class MonthFragment extends Fragment {
             }
         });
 
+        // 하나의 항목만 선택가능
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         if (savedInstanceState != null) {

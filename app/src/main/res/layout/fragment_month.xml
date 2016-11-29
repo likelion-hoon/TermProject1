@@ -8,8 +8,11 @@
 
     <ListView
         android:id="@+id/listview1"
+        android:divider="#0000FF"
+        android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 
 </LinearLayout>
 
