@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Our Calendar");
     }
 
     // 액션바 생성
@@ -63,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 ab.setTitle("Date Calendar");
                 return true;
             case R.id.insert_sche:
-                startActivity(new Intent(this, ScheDetailsActivity.class));
-
+                Intent intent = new Intent(this, ScheEditActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

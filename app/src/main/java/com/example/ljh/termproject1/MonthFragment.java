@@ -25,7 +25,6 @@ public class MonthFragment extends Fragment {
 
     int mCurCheckPosition = -1;
 
-
     public MonthFragment() {
         // Required empty public constructor
     }
@@ -52,9 +51,10 @@ public class MonthFragment extends Fragment {
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                mCurCheckPosition = i;
-                ((OnTitleSelectedListener)getActivity()).onTitleSelected(i, false);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                mCurCheckPosition = position;
+                ((OnTitleSelectedListener)getActivity()).onTitleSelected(position, false);
+
             }
         });
 

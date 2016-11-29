@@ -12,14 +12,23 @@ package com.example.ljh.termproject1;
 
 import android.app.Activity;
 import android.os.Bundle;
-
-/**
- * Created by B10601 on 2016-11-24.
- */
+import android.widget.TextView;
 
 public class ScheDetailsActivity extends Activity {
+
+    // Month month;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedetail);
+
+    /*
+        // textview의 아이디를 얻어온다.(일정을 보여줄 위젯)
+        TextView tv = (TextView) findViewById(R.id.date);
+        // Switch Case문을 사용해서
+        // 월별이면 아래 코드를 실행시키고
+        tv.setText(month.MONTHS[i]);
+        // 주별이면 아래 코드를 실행
+        tv.setText(week.WEEKS[i]);
+                                       */
     }
 }

@@ -18,12 +18,16 @@ public class MyDBHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, DATABASE_VERSION);
     }
 
+    // DB테이블 생성
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE schedule (" +
-                "_id INTEGER  NOT NULL PRIMARY KEY," +
-                "title TEXT  NULL," +
-                "datetime DATETIME  NULL" +
+                "title STRING  NULL," +
+                "date DATETIME  NULL," +
+                "starttime STRING  NULL," +
+                "endtime STRING  NULL," +
+                "location STRING  NULL," +
+                "memo TEXT  NULL," +
                 ");");
     }
 

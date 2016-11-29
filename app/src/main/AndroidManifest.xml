@@ -18,17 +18,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
-
-        </activity>
-
-        <activity
-            android:name="ScheDetailsActivity"
-            android:parentActivityName=".MainActivity"/>
-
-        <activity
-            android:name="ScheEditActivity" />
-
+        <activity android:name=".MainActivity" />
+        <activity android:name="ScheDetailsActivity" />
+        <activity android:name="ScheEditActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
