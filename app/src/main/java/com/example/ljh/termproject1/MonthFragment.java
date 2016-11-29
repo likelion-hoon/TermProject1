@@ -23,6 +23,7 @@ import java.util.ArrayList;
 
 public class MonthFragment extends Fragment {
 
+    ListView lv;
     int mCurCheckPosition = -1;
 
     public MonthFragment() {
@@ -45,7 +46,7 @@ public class MonthFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_month, container, false);
 
-        ListView lv = (ListView) view.findViewById(R.id.listview1);
+        lv = (ListView) view.findViewById(R.id.listview1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.listview_edit, Month.MONTHS);
         lv.setAdapter(adapter);
 
@@ -53,6 +54,7 @@ public class MonthFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 mCurCheckPosition = position;
+                String value = lv.getItemAtPosition(position).toString();
                 ((OnTitleSelectedListener)getActivity()).onTitleSelected(position, false);
 
             }
