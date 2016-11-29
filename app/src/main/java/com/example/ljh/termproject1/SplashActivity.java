@@ -22,7 +22,7 @@ public class SplashActivity extends Activity {
 
         mSplash = (ImageView) findViewById(R.id.splash_image);
         Handler hd = new Handler();
-        hd.postDelayed(new SplashHandler(), 5000); // 3초 후에 hd Handler 실행
+        hd.postDelayed(new SplashHandler(), 5000); // 5초 후에 hd Handler 실행
     }
 
     private class SplashHandler implements Runnable {
