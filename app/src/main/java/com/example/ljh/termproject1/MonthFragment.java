@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,7 @@ public class MonthFragment extends Fragment {
 
     ListView lv;
     int mCurCheckPosition = -1;
+
 
     public MonthFragment() {
         // Required empty public constructor
@@ -52,11 +54,9 @@ public class MonthFragment extends Fragment {
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                mCurCheckPosition = position;
-                String value = lv.getItemAtPosition(position).toString();
-                ((OnTitleSelectedListener)getActivity()).onTitleSelected(position, false);
-
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+                mCurCheckPosition = i;
+                ((OnTitleSelectedListener)getActivity()).onTitleSelected(i, false);
             }
         });
 
